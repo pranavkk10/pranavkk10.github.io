@@ -1,14 +1,73 @@
 <!DOCTYPE html>
-<htm>
+<html>
     <body>
         <h1>CSCE 242</h1>
-        <p>This is a class that utilizes HTML and CSS to design the front-end of a website </p>
-        <h2>Pranav Kanumuri</h2>
-        <h3>Assignments </h3>
-        <ul>
-            <li>
-                <a href="assignments/01-basic html/index.html">Basic HTML</a>
-            </li>
-        </ul>
-    </body>
-</htm>
+        <style>
+            body {
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: #f0f2f5;
+              color: #1f2933;
+            }
+        
+            #container {
+              max-width: 800px;
+              margin: 40px auto;
+              padding: 20px;
+              background-color: #ffffff;
+              border-radius: 8px;
+            }
+        
+            #course-title {
+              color: #003366;
+            }
+        
+            #student-name {
+              color: #444;
+            }
+        
+            #github-link {
+              display: block;
+              margin: 15px 0;
+              color: #0066cc;
+              text-decoration: none;
+              font-weight: bold;
+            }
+        
+            .assignment-link {
+              text-decoration: none;
+              color: #0066cc;
+            }
+          </style>
+        <body>
+            <div id="container">
+
+                <h1 id="course-title">CSCE 242</h1>
+                <p>This course focuses on HTML and CSS for front-end web development.</p>
+            
+                <h2 id="student-name">Pranav Kanumuri</h2>
+            
+                <a id="github-link"
+                   href="https://github.com/pranavkk10/pranavkk10.github.io/tree/main/csce242"
+                   target="_blank">
+                  GitHub Repository
+                </a>
+            
+                <h3>Assignments</h3>
+            
+                <ul id="assignments-list">
+                  <li>
+                    <a class="assignment-link" href="assignments/01-basic html/index.html">
+                      Assignment 1 – Basic HTML
+                    </a>
+                  </li>
+            
+                  <li>
+                    <a class="assignment-link" href="assignments/02-basic css/index.html">
+                      Assignment 2
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </body>
+            </html>

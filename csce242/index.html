@@ -1,44 +1,103 @@
 <!DOCTYPE html>
-<html>
-<h1>CSCE 242</h1>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>CSCE 242</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div id="container">
+  <div id="container">
 
-  <h1 id="course-title">CSCE 242</h1>
-  <p>This course focuses on HTML and CSS for front-end web development.</p>
+    <header class="page-header">
+      <h1 id="course-title">CSCE 242</h1>
+      <p class="course-desc">
+        This course focuses on HTML and CSS for front-end web development.
+      </p>
 
-  <h2 id="student-name">Pranav Kanumuri</h2>
-
-  <a id="github-link"
-    href="https://github.com/pranavkk10/pranavkk10.github.io/tree/main/csce242"
-    target="_blank">
-    GitHub Repository
-  </a>
-
-  <h3>Assignments</h3>
-
-  <ul id="assignments-list">
-    <li>
-      <a class="assignment-link" href="assignments/01-basic html/index.html">
-        Assignment 1 – Basic HTML
+      <a id="github-link"
+         href="https://github.com/pranavkk10/pranavkk10.github.io/tree/main/csce242"
+         target="_blank" rel="noopener">
+        GitHub Repository
       </a>
-    </li>
+    </header>
 
-    <li>
-      <a class="assignment-link" href="assignments/02-basic css/index.html">
-        Assignment 2 – Basic CSS
-      </a>
-    </li>
+    <main>
+      <section class="author">
+        <h2 id="student-name">Pranav Kanumuri</h2>
+      </section>
 
-    <li>
-      <a class="assignment-link" href="assignments/03-page layout/index.html">
-        Assignment 3 – Page Layout
-      </a>
-    </li>
-  </ul>
-</div>
+      <!-- Assignments Section -->
+      <section id="assignments" class="cards-section">
+        <h3>Assignments</h3>
+
+        <div id="assignments-list" class="cards">
+          <article class="card">
+            <h4 class="card-title">
+              <a class="assignment-link" href="assignments/01-basic html/index.html">
+                Assignment 1 – Basic HTML
+              </a>
+            </h4>
+            <img class="card-img" src="images/Screenshot 2026-01-24 at 7.02.00 PM.png" alt="Assignment 1 screenshot">
+            <p class="card-desc">
+              This assignment focused on building a basic HTML page using proper structure,
+              headings, lists, and links.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4 class="card-title">
+              <a class="assignment-link" href="assignments/02-basic css/index.html">
+                Assignment 2 – Basic CSS
+              </a>
+            </h4>
+            <img class="card-img" src="images/Screenshot 2026-01-24 at 7.02.49 PM.png" alt="Assignment 2 screenshot">
+            <p class="card-desc">
+              This assignment introduced CSS styling such as colors, fonts, spacing,
+              and basic layout techniques.
+            </p>
+          </article>
+
+          <article class="card">
+            <h4 class="card-title">
+              <a class="assignment-link" href="assignments/03-page layout/index.html">
+                Assignment 3 – Page Layout
+              </a>
+            </h4>
+            <img class="card-img" src="images/Screenshot 2026-01-24 at 7.03.23 PM.png" alt="Assignment 3 screenshot">
+            <p class="card-desc">
+              This assignment focused on creating structured page layouts using flexbox
+              to control alignment and spacing.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="cards-section">
+        <h3>Projects</h3>
+
+        <div id="projects-list" class="cards">
+          <article class="card">
+            <h4 class="card-title">
+              <a class="project-link" href="project/part1/Pranav Kanumuri_Project Part 1_ Topic Selection.pdf">
+                Project Topic PDF
+              </a>
+            </h4>
+            <img class="card-img" src="images/Screenshot 2026-01-24 at 7.07.58 PM.png" alt="Project topic screenshot">
+            <p class="card-desc">
+              This project outlines my chosen topic and ideas for the final website,
+              including goals and planned features.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>© Pranav Kanumuri — CSCE 242</p>
+    </footer>
+
+  </div>
 </body>
 </html>

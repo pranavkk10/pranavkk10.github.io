@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assignment 8 — If Statements</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="pageTitle">
+    <header>
+      <h1 id="pageTitle">Assignment 8</h1>
+      <h2>If Statements</h2>
+    </header>
+
+    <div class="topnav" aria-hidden="false">
+      <div class="menu-toggle" id="menuToggle" aria-expanded="false" tabindex="0" role="button" aria-label="Toggle navigation">
+        <span class="arrow" aria-hidden="true"></span>
+      </div>
+
+      <nav id="mainNav" aria-label="Main navigation">
+        <a id="ex1Link">Exercise 1</a>
+        <a id="ex2Link">Exercise 2</a>
+      </nav>
+    </div>
+
+    <section id="ex1" class="card" aria-labelledby="ex1Title">
+      <div class="slider-wrap">
+        <div class="question" id="ex1Title">How many minutes until class?</div>
+
+        <input id="minsRange" type="range" min="0" max="60" step="1" value="24" aria-label="Minutes until class slider" />
+
+        <div class="minutes" id="minsValue">24 minutes</div>
+
+        <div class="message" id="rangeMessage" aria-live="polite">
+          <span class="emoji">☕️</span>Grab your coffee. No one will judge if you're 5 minutes late.
+        </div>
+      </div>
+    </section>
+
+    <section id="ex2" class="card hidden" aria-labelledby="ex2Title">
+      <div id="ex2Title" class="count-title">Countdown till class</div>
+      <div class="count-sub" id="countdownMessage">Calculating...</div>
+      <div class="muted" style="margin-top:10px;">(Class assumed to start at <strong>8:30 AM</strong> local time)</div>
+    </section>
+
+    <footer>@PranavKanumuri.com</footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

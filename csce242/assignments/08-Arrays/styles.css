@@ -1,0 +1,28 @@
+:root{
+    --bg: #f3f6ef;
+    --teal: #6ea6a0;
+    --accent: #e38b8b;
+    --text: #234;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%; margin:0; font-family: "Helvetica Neue", Arial, sans-serif; background:var(--bg); color:var(--text)}
+  .page{max-width:760px; margin:2rem auto; padding:2rem; text-align:center}
+  
+  h1{color:var(--teal); font-size:2.4rem; margin:0 0 .4rem}
+  h2{color:var(--accent); margin:0 0 1.2rem}
+  
+  .controls{margin:1.5rem 0}
+  label{margin-right:.75rem; font-size:1rem}
+  select{padding:.35rem .5rem; font-size:1rem; border-radius:4px; border:1px solid #bfc}
+  
+  .song-list{margin:1.5rem 0}
+  #songList{list-style:none; padding:0; max-width:560px; margin:0 auto; text-align:left}
+  #songList li{margin:0.6rem 0; padding:0}
+  #songList a{color: #276; text-decoration:underline; cursor:pointer}
+  
+  .player{margin-top:1.2rem}
+  #playerContainer{max-width:640px; margin:0 auto}
+  iframe{width:100%; height:360px; border:0; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.15)}
+  
+  .credit{color:var(--accent); margin-top:2rem}

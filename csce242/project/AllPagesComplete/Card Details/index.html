@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sports Card Vault - Card Details</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" role="banner">
+      <h1 class="site-title">Sports Card Vault</h1>
+
+      <nav aria-label="Primary">
+        <ul class="primary-nav">
+          <li><a href="../Hompage/index.html">Home</a></li>
+          <li><a href="../Card Database/index.html">Card Database</a></li>
+          <li><a href="../Card Details/index.html">Card Details</a></li>
+          <li><a href="../Add Edit Cards/index.html">Add/Edit Cards</a></li>
+          <li><a href="../About and Contact/index.html">About &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="app-scale">
+      <main class="container page-content">
+        <a href="#" class="back-link">← Back</a>
+
+        <section class="card-layout">
+          <img class="hero-img" src="images/Michael.jpeg" alt="Michael Jordan basketball card" />
+
+          <div class="details-col">
+            <div class="title-row">
+              <div>
+                <h1>Michael Jordan</h1>
+                <p class="meta">1986</p>
+                <p class="meta">Fleer</p>
+              </div>
+              <button class="edit-btn"> Search for more cards</button>
+            </div>
+
+            <div class="value-box">
+              <div class="value-label">↗ Estimated Value</div>
+              <div class="value-amount">$250,000</div>
+            </div>
+
+            <div class="stats-grid">
+              <article class="stat-box"><div class="stat-label">🗓 Year</div><div class="stat-value">1986</div></article>
+              <article class="stat-box"><div class="stat-label">#&nbsp;&nbsp;Card Number</div><div class="stat-value">#57</div></article>
+              <article class="stat-box"><div class="stat-label">⌖ Sport</div><div class="stat-value">Basketball</div></article>
+              <article class="stat-box"><div class="stat-label">⌖ Grade</div><div class="stat-value">PSA 10</div></article>
+            </div>
+
+            <section class="card-details-box">
+              <h2>Card Details</h2>
+              <div class="row"><span>Brand</span><strong>Fleer</strong></div>
+              <div class="row"><span>Player</span><strong>Michael Jordan</strong></div>
+              <div class="row"><span>Sport</span><strong>Basketball</strong></div>
+              <div class="row"><span>Year Released</span><strong>1986</strong></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="more-cards">
+          <h2>More Basketball Cards</h2>
+          <div class="cards-row">
+            <article class="mini-card">
+              <img src="images/Lebron.jpeg" alt="LeBron James card" />
+              <div class="mini-card-body">
+                <h3>LeBron James</h3>
+                <p>2003 Topps</p>
+                <strong>$35,000</strong>
+              </div>
+            </article>
+
+            <article class="mini-card">
+              <img src="images/Kobe.jpeg" alt="Kobe Bryant card" />
+              <div class="mini-card-body">
+                <h3>Kobe Bryant</h3>
+                <p>1996 Topps Chrome</p>
+                <strong>$95,000</strong>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer></footer>
+  </div>
+
+  <script>
+    (function () {
+      const navLinks = document.querySelectorAll('.primary-nav a');
+      const currentPath = location.pathname.replace(/\/$/, '');
+      navLinks.forEach(a => {
+        const href = a.getAttribute('href');
+        const linkPath = href.startsWith('/') ? href.replace(/\/$/, '') : ('/' + href.replace(/^\.\.\//, '').replace(/\/$/, ''));
+        if (linkPath === currentPath || currentPath.endsWith(linkPath) || (linkPath === '/index.html' && currentPath === '')) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

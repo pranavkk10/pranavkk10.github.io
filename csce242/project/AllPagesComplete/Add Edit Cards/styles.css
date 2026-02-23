@@ -1,0 +1,199 @@
+:root {
+  --navy: #07162f;
+  --page-bg: #ffffff;          /* page background (white like first image) */
+  --off-white: #ffffff;        /* page-shell background changed to white */
+  --surface: #fff2f2;          /* pale pink form card */
+  --text: #11131a;
+  --muted: #5e6574;
+  --border: #e7e4e6;           /* softer border for inputs */
+  --shadow: 0 8px 24px rgba(7,22,47,0.08);
+}
+
+/* --- reset / base --- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* --- page shell / header / nav --- */
+.page-shell {
+  width: 100%;
+  margin: 0;
+  background: var(--off-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* keep header full width visually like the original screenshot */
+.site-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: none;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.2vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: clamp(12px, 2vw, 36px);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  opacity: 0.95;
+}
+
+/* ===========================
+   CENTERED CONTENT (ALL sizes)
+   =========================== */
+.content {
+  width: min(860px, 92vw);
+  margin: 60px auto 80px;   /* centers horizontally on all screen sizes */
+  padding: 0 16px;
+}
+
+/* back link and page title styling tuned to match first screenshot */
+.back-link {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 1.25rem;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.content h2 {
+  margin: 12px 0 26px;
+  font-weight: 500;
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  line-height: 1;
+  color: var(--text);
+}
+
+/* --- form card: pale pink, rounded, soft shadow, centered --- */
+.form-card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: clamp(26px, 3.2vw, 44px);
+  max-width: 720px;         /* narrower box like the first image */
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(226, 217, 218, 0.6);
+  margin: 0 auto;           /* ensure the card is centered inside .content */
+}
+
+/* labels / inputs tuned to match first screenshot visuals */
+label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  color: #2b2f36;
+}
+
+input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0 16px;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  background: #fff; /* crisp white fields like first */
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+
+/* subtle focus treatment */
+input:focus {
+  box-shadow: 0 6px 18px rgba(7,22,47,0.06);
+  border-color: rgba(7,22,47,0.08);
+}
+
+/* two-column layout similar to the design (keeps spacing consistent) */
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;            /* slightly larger gap to match first image */
+}
+
+/* actions: keep buttons compact and with stronger visual weight for primary */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+/* buttons */
+.btn {
+  border-radius: 12px;
+  height: 56px;
+  padding: 0 28px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* primary button: dark navy, slightly taller/rounded and with shadow */
+.btn-primary {
+  background: var(--navy);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(7,22,47,0.18);
+}
+
+/* secondary looks like pale pill button with border */
+.btn-secondary {
+  background: transparent;
+  color: #202432;
+  border-color: rgba(32,36,50,0.08);
+}
+
+/* footer stays anchored */
+footer {
+  background: var(--navy);
+  min-height: 112px;
+  margin-top: auto;
+}
+
+/* responsive adjustments — stack columns and keep content centered on small screens */
+@media (max-width: 950px) {
+  .site-header { flex-direction: column; text-align: center; }
+  nav ul { justify-content: center; }
+  .two-col { grid-template-columns: 1fr; gap: 18px; }
+  .actions { flex-wrap: wrap; }
+  .content {
+    width: min(92vw, 720px);
+    margin: 40px auto 60px;
+    padding: 0 20px;
+  }
+  .form-card { max-width: 100%; padding: 22px; }
+}

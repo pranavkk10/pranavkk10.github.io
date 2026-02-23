@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Card Vault | Add New Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <h1>Sports Card Vault</h1>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../Hompage/index.html">Home</a></li>
+          <li><a href="../Card Database/index.html">Card Database</a></li>
+          <li><a href="../Card Details/index.html">Card Details</a></li>
+          <li><a href="../Add Edit Cards/index.html">Add/Edit Cards</a></li>
+          <li><a href="../About and Contact/index.html">About and Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <a class="back-link" href="#" aria-label="Go back">← Back</a>
+      <h2>+ Add New Card</h2>
+
+      <section class="form-card" aria-label="Add new card form">
+        <form>
+          <label for="player">Player Name *</label>
+          <input id="player" type="text" placeholder="e.g., Michael Jordan" required>
+
+          <div class="two-col">
+            <div>
+              <label for="year">Year *</label>
+              <input id="year" type="number" placeholder="2026" value="2026" required>
+            </div>
+
+            <div>
+              <label for="sport">Sport *</label>
+              <input id="sport" type="text" required>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <label for="brand">Brand *</label>
+              <input id="brand" type="text" placeholder="e.g., Fleer, Topps" required>
+            </div>
+
+            <div>
+              <label for="card-number">Card Number *</label>
+              <input id="card-number" type="text" placeholder="e.g., #57" required>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <label for="grade">Grade (Optional)</label>
+              <input id="grade" type="text" placeholder="e.g., PSA 10, BGS 9.5">
+            </div>
+
+            <div>
+              <label for="value">Estimated Value ($) *</label>
+              <input id="value" type="number" min="0" value="0" required>
+            </div>
+          </div>
+
+          <label for="image">Image URL *</label>
+          <input id="image" type="url" placeholder="https://example.com/card-image.jpg" required>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">💾 Add Card</button>
+            <button class="btn btn-secondary" type="button">Cancel</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+  </div>
+</body>
+</html>

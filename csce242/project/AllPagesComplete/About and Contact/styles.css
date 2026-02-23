@@ -55,8 +55,8 @@ nav ul {
     display: flex;
     gap: clamp(16px, 2vw, 28px);
     align-items: center;
-    flex-wrap: nowrap;   /* FIX */
-    white-space: nowrap; /* FIX */
+    flex-wrap: nowrap;   
+    white-space: nowrap; 
   }
 
 nav a {

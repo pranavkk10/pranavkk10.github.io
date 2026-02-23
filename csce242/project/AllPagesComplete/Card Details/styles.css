@@ -7,12 +7,12 @@
   --muted: #5e6574;
   --border: #e7e4e6;
   --shadow: 0 8px 24px rgba(7,22,47,0.08);
-  --ui-scale: 0.82; /* preserve your scaling */
+  --ui-scale: 0.82;
   --line: #d8dde3;
 }
 
-/* --- base / fonts --- */
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -22,7 +22,6 @@ body {
   background: var(--page-bg);
 }
 
-/* PAGE SHELL (keeps header full width and content centered) */
 .page-shell {
   width: 100%;
   min-height: 100vh;
@@ -31,9 +30,6 @@ body {
   background: var(--off-white);
 }
 
-/* ---------------------------------
-   HEADER / NAV (NEW: matches screenshot)
-   --------------------------------- */
 .site-header {
   background: var(--navy);
   color: #fff;
@@ -47,7 +43,6 @@ body {
   position: relative;
 }
 
-/* site title */
 .site-header .site-title {
   margin: 0;
   font-size: clamp(1.6rem, 2.2vw, 2.6rem);
@@ -56,7 +51,6 @@ body {
   color: #fff;
 }
 
-/* primary nav */
 .primary-nav {
   margin: 0;
   padding: 0;
@@ -82,7 +76,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* active and focus styles for accessibility */
 nav a.active,
 nav a[aria-current="page"] {
   font-weight: 600;
@@ -97,7 +90,6 @@ nav a:focus {
   border-radius: 6px;
 }
 
-/* Keep .app-scale behavior (unchanged) */
 .app-scale {
   transform: scale(var(--ui-scale));
   transform-origin: top left;
@@ -106,15 +98,11 @@ nav a:focus {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- container used by the rest of your layout --- */
 .container {
   width: min(1540px, 94vw);
   margin: 0 auto;
 }
 
-/* -------------------------
-   Page content & existing styles (merged from your CSS)
-   ------------------------- */
 .page-content {
   padding: 48px 0 80px;
 }
@@ -125,7 +113,6 @@ nav a:focus {
   font-size: 28px;
 }
 
-/* card layout and other styles (kept with slight reductions) */
 .card-layout {
   margin-top: 28px;
   display: grid;
@@ -287,14 +274,12 @@ h1 {
   font-weight: 500;
 }
 
-/* footer */
 footer {
   margin-top: 60px;
   background: var(--navy);
   height: 75px;
 }
 
-/* responsive */
 @media (max-width: 1200px) {
   .site-header { flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 14px; }
   .primary-nav { justify-content: center; gap: 12px 18px; }
@@ -307,5 +292,4 @@ footer {
   .mini-card-body p, .back-link, .edit-btn { font-size: 14px; }
 }
 
-/* small utility to ensure nav links in scaled area remain visible */
 .site-header + .app-scale { margin-top: 6px; }

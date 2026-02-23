@@ -1,15 +1,14 @@
 :root {
   --navy: #07162f;
-  --page-bg: #ffffff;          /* page background (white like first image) */
-  --off-white: #ffffff;        /* page-shell background changed to white */
-  --surface: #fff2f2;          /* pale pink form card */
+  --page-bg: #ffffff;
+  --off-white: #ffffff;
+  --surface: #fff2f2;
   --text: #11131a;
   --muted: #5e6574;
-  --border: #e7e4e6;           /* softer border for inputs */
+  --border: #e7e4e6;
   --shadow: 0 8px 24px rgba(7,22,47,0.08);
 }
 
-/* --- reset / base --- */
 * { box-sizing: border-box; }
 
 body {
@@ -21,7 +20,6 @@ body {
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* --- page shell / header / nav --- */
 .page-shell {
   width: 100%;
   margin: 0;
@@ -31,7 +29,6 @@ body {
   flex-direction: column;
 }
 
-/* keep header full width visually like the original screenshot */
 .site-header {
   background: var(--navy);
   color: #fff;
@@ -68,16 +65,12 @@ nav a {
   opacity: 0.95;
 }
 
-/* ===========================
-   CENTERED CONTENT (ALL sizes)
-   =========================== */
 .content {
   width: min(860px, 92vw);
-  margin: 60px auto 80px;   /* centers horizontally on all screen sizes */
+  margin: 60px auto 80px;
   padding: 0 16px;
 }
 
-/* back link and page title styling tuned to match first screenshot */
 .back-link {
   text-decoration: none;
   color: var(--muted);
@@ -94,18 +87,16 @@ nav a {
   color: var(--text);
 }
 
-/* --- form card: pale pink, rounded, soft shadow, centered --- */
 .form-card {
   background: var(--surface);
   border-radius: 14px;
   padding: clamp(26px, 3.2vw, 44px);
-  max-width: 720px;         /* narrower box like the first image */
+  max-width: 720px;
   box-shadow: var(--shadow);
   border: 1px solid rgba(226, 217, 218, 0.6);
-  margin: 0 auto;           /* ensure the card is centered inside .content */
+  margin: 0 auto;
 }
 
-/* labels / inputs tuned to match first screenshot visuals */
 label {
   display: block;
   margin: 0 0 8px;
@@ -122,25 +113,22 @@ input {
   margin-bottom: 20px;
   font-family: inherit;
   font-size: clamp(0.98rem, 1.05vw, 1.08rem);
-  background: #fff; /* crisp white fields like first */
+  background: #fff;
   outline: none;
   transition: box-shadow .12s ease, border-color .12s ease;
 }
 
-/* subtle focus treatment */
 input:focus {
   box-shadow: 0 6px 18px rgba(7,22,47,0.06);
   border-color: rgba(7,22,47,0.08);
 }
 
-/* two-column layout similar to the design (keeps spacing consistent) */
 .two-col {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;            /* slightly larger gap to match first image */
+  gap: 28px;
 }
 
-/* actions: keep buttons compact and with stronger visual weight for primary */
 .actions {
   display: flex;
   gap: 16px;
@@ -148,7 +136,6 @@ input:focus {
   align-items: center;
 }
 
-/* buttons */
 .btn {
   border-radius: 12px;
   height: 56px;
@@ -162,7 +149,6 @@ input:focus {
   gap: 10px;
 }
 
-/* primary button: dark navy, slightly taller/rounded and with shadow */
 .btn-primary {
   background: var(--navy);
   color: #fff;
@@ -170,21 +156,18 @@ input:focus {
   box-shadow: 0 6px 18px rgba(7,22,47,0.18);
 }
 
-/* secondary looks like pale pill button with border */
 .btn-secondary {
   background: transparent;
   color: #202432;
   border-color: rgba(32,36,50,0.08);
 }
 
-/* footer stays anchored */
 footer {
   background: var(--navy);
   min-height: 112px;
   margin-top: auto;
 }
 
-/* responsive adjustments — stack columns and keep content centered on small screens */
 @media (max-width: 950px) {
   .site-header { flex-direction: column; text-align: center; }
   nav ul { justify-content: center; }

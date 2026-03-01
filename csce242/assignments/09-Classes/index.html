@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music Gallery</title>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Classes</h1>
+    <h2 class="subtitle">Music Time</h2>
+  </header>
+
+  <main class="container">
+    <section id="gallery" class="gallery" aria-live="polite">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#" class="credit">@PranavKanumuri</a>
+  </footer>
+
+  <div id="songModal" class="w3-modal" style="display:none;">
+    <div class="w3-modal-content w3-animate-opacity modal-inner">
+      <header class="modal-header">
+        <span id="modalClose" class="w3-button w3-display-topright" title="Close">✕</span>
+        <h3 id="modalTitle">Song Title</h3>
+        <p id="modalArtist" class="muted small"></p>
+      </header>
+
+      <div class="modal-body">
+        <div class="modal-left">
+          <div id="modalVideo" class="video-wrapper" aria-hidden="false"></div>
+        </div>
+
+        <div class="modal-right">
+          <dl class="song-details">
+            <dt>Album</dt><dd id="modalAlbum"></dd>
+            <dt>Year</dt><dd id="modalYear"></dd>
+            <dt>Genre</dt><dd id="modalGenre"></dd>
+            <dt>Cover</dt>
+            <dd>
+              <img id="modalCover" src="" alt="Album cover" class="cover-small">
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

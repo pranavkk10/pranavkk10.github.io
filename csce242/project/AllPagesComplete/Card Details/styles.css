@@ -90,6 +90,51 @@ nav a:focus {
   border-radius: 6px;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--off-white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  #mainNav {
+    display: block;        
+    max-height: 0;         
+    overflow: hidden;
+    transition: max-height 280ms ease;
+    width: 100%;
+  }
+
+  #mainNav.active {
+    max-height: 800px;     
+  }
+
+  #mainNav .primary-nav {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  #mainNav .primary-nav a {
+    display: inline-block;
+    padding: 10px 14px;
+    width: auto;
+    text-align: center;
+  }
+}
+
 .app-scale {
   transform: scale(var(--ui-scale));
   transform-origin: top left;
@@ -285,7 +330,11 @@ footer {
   .primary-nav { justify-content: center; gap: 12px 18px; }
   .page-content { padding: 40px 0 60px; }
   .card-layout { grid-template-columns: 1fr; }
-  .hero-img { max-width: 540px; height: 420px; margin: 0 auto; }
+  .hero-img {  max-width: 540px; 
+    width: 100%;
+    height: auto;              /* allow full image to show */
+    margin: 0 auto; 
+    object-fit: contain; }
   h1 { font-size: 34px; }
   .meta, .value-label, .stat-label, .row { font-size: 16px; }
   .value-amount, .stat-value, .card-details-box h2, .more-cards h2, .mini-card-body h3, .mini-card-body strong { font-size: 20px; }

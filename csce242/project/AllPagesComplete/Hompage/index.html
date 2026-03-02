@@ -9,11 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+<script src="script.js"></script>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <h1>Sports card vault</h1>
-      <nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+        ☰
+      </button>
+
+      <nav id="mainNav">
         <ul>
           <li><a href="../Hompage/index.html">Home</a></li>
           <li><a href="../Card Database/index.html">Card Database</a></li>
@@ -61,7 +67,25 @@
           </a>
         </div>
       </section>
+      <section class="slideshow-section" aria-label="Card slideshow">
+        <div class="slideshow" id="slideshow" tabindex="0">
+          <button class="slideshow-btn prev" id="prevBtn" aria-label="Previous slide">‹</button>
+      
+          <div class="slides-track" id="slidesTrack" aria-live="polite">
+          </div>
+      
+          <button class="slideshow-btn next" id="nextBtn" aria-label="Next slide">›</button>
+      
+          <div class="slideshow-controls">
+            <button id="playPauseBtn" class="play-pause" aria-pressed="false" aria-label="Pause slideshow">❚❚</button>
+          </div>
+      
+          <div class="thumbnails" id="thumbnails" aria-hidden="false">
+          </div>
+        </div>
+      </section>
     </main>
   </div>
+  <script src="slideshow.js" defer></script>
 </body>
 </html>

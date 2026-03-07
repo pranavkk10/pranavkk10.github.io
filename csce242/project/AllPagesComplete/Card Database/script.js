@@ -43,5 +43,48 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleBtn.focus();
       }
     });
+
+    fetch("https://pranavkk10.github.io/csce242/project/AllPagesComplete/json/cards.json")
+    .then(response => response.json())
+    .then(data => {
+
+      const grid = document.querySelector(".card-grid");
+      const count = document.querySelector(".count");
+
+      if (!grid) return; // prevents errors on other pages
+
+      grid.innerHTML = "";
+      if (count) {
+        count.textContent = `Showing ${data.length} of ${data.length} cards`;
+      }
+
+      data.forEach(card => {
+
+        const article = document.createElement("article");
+        article.classList.add("card");
+
+        article.innerHTML = `
+          <img src="https://pranavkk10.github.io/csce242/project/AllPagesComplete/${card.img_name}" alt="${card.name}" />
+          <div class="card-body">
+            <h2>${card.name}</h2>
+            <p class="meta">${card.brand} ${card.year} ${card.card_number}</p>
+            <div class="tags">
+              <span class="tag sport">${card.sport}</span>
+              <span class="tag grade">${card.grade}</span>
+            </div>
+            <p class="price">$${card.price.toLocaleString()}</p>
+          </div>
+        `;
+
+        grid.appendChild(article);
+      });
+
+    })
+    .catch(error => {
+      console.error("Error loading JSON:", error);
+    });
+
   
   });
+
+    

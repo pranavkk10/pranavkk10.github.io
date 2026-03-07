@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleBtn.focus();
       }
     });
-
-    fetch("https://pranavkk10.github.io/csce242/project/AllPagesComplete/json/cards.json")
+    //json parsing
+    fetch("https://pranavkk10.github.io/csce242/project/Card Database/json/cards.json")
     .then(response => response.json())
     .then(data => {
 
       const grid = document.querySelector(".card-grid");
       const count = document.querySelector(".count");
 
-      if (!grid) return; // prevents errors on other pages
+      if (!grid) return; 
 
       grid.innerHTML = "";
       if (count) {

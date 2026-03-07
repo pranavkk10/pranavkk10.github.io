@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     //json parsing
-    fetch("https://pranavkk10.github.io/csce242/project/Card Database/json/cards.json")
+    fetch("https://pranavkk10.github.io/csce242/project/AllPagesComplete/Card Database/json/cards.json")
     .then(response => response.json())
     .then(data => {
 

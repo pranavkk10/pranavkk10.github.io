@@ -269,3 +269,43 @@ h2 {
   #mainNav ul li{width:100%}
   #mainNav ul li a{display:inline-block;padding:10px 14px;width:100%;text-align:center}
 }
+
+.form-status {
+  margin-top: 12px;
+  min-height: 1.4em;
+  font-size: 0.98rem;
+  line-height: 1.2;
+  transition: all 160ms ease;
+}
+.form-status.success {
+  color: #0b7a3f; 
+  background: rgba(11, 122, 63, 0.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(11, 122, 63, 0.12);
+}
+.form-status.error {
+  color: #9b1b1b; 
+  background: rgba(155, 27, 27, 0.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(155, 27, 27, 0.12);
+}
+.form-status.info {
+  color: var(--muted);
+}
+
+.contact-form button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 420px) {
+  .contact-form {
+    padding: 18px;
+  }
+  .contact-form button {
+    font-size: 1.25rem;
+    padding: 12px 14px;
+  }
+}
